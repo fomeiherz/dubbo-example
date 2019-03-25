@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- provider's name, used for tracing dependency relationship -->
+    <dubbo:application name="dubbo-provider" />
+
+    <!-- use zookeeper registry center to export service  -->
+    <!--<dubbo:registry protocol="zookeeper" address="192.168.2.118:2181" />-->
+    <dubbo:registry address="multicast://224.5.6.7:1234" />
+
+    <!-- use dubbo protocol to export service on port 20886 -->
+    <dubbo:protocol name="dubbo" port="20886" />
+
+    <!-- declare the service interface to exported -->
+    <dubbo:service interface="top.fomeiherz.SpeakApi" ref="speakApi" />
+
+</beans>

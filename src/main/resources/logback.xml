@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Log out to console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <Encoding>UTF-8</Encoding>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Log level -->
+    <root>
+        <level value="info"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>  
