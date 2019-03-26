@@ -17,3 +17,4 @@ logs/*
 .settings/
 /log.dir_IS_UNDEFINED
 /hsql
+/*/target/
