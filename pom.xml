@@ -50,7 +50,7 @@
             </exclusions>
         </dependency>
 
-        <!-- zookeeper -->
+        <!-- Zookeeper -->
         <dependency>
             <groupId>com.101tec</groupId>
             <artifactId>zkclient</artifactId>
