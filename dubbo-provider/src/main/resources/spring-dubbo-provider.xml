@@ -17,6 +17,8 @@
     <dubbo:protocol name="dubbo" port="20886" />
 
     <!-- declare the service interface to exported -->
-    <dubbo:service interface="top.fomeiherz.SpeakApi" ref="speakApi" />
+    <!--<dubbo:service interface="top.fomeiherz.SpeakApi" ref="speakApi" />-->
+
+    <dubbo:annotation package="top.fomeiherz" />
 
 </beans>

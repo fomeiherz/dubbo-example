@@ -1,10 +1,10 @@
 package top.fomeiherz.impl;
 
-import org.springframework.stereotype.Component;
+import com.alibaba.dubbo.config.annotation.Service;
 import top.fomeiherz.model.People;
 import top.fomeiherz.SpeakApi;
 
-@Component("speakApi")
+@Service
 public class SpeakApiImpl implements SpeakApi {
 
     public String speak(People people) {
