@@ -11,7 +11,7 @@
 
     <!-- use zookeeper registry center to export service  -->
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
-    <!--<dubbo:registry address="multicast://224.5.6.7:1234" />-->
+    <dubbo:registry address="multicast://224.5.6.7:1234" />
 
     <!-- use dubbo protocol to export service on port 20886 -->
     <dubbo:protocol name="dubbo" port="20886" />
@@ -20,5 +20,7 @@
     <!--<dubbo:service interface="top.fomeiherz.SpeakApi" ref="speakApi" />-->
 
     <dubbo:annotation package="top.fomeiherz" />
+
+    <dubbo:provider scope="remote" delay="5000" />
 
 </beans>
